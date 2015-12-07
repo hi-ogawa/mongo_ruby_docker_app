@@ -1,6 +1,6 @@
 require "mongoid"
 
-Mongoid.load!("./mongoid.yml", :development)
+Mongoid.load!("./config/mongoid.yml", :development)
 
 =begin
 
