@@ -1,0 +1,9 @@
+development:
+  clients:
+    default:
+      database: replica_test_db
+      hosts:
+        - node1.example.com:27017
+        - node2.example.com:27017
+      options:
+        replica_set: rs0
