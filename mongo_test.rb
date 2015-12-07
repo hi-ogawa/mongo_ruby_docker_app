@@ -4,7 +4,7 @@ Mongoid.load!("./mongoid.yml", :development)
 
 =begin
 
-$ docker run -it --rm=true --name mrdt --add-host node1.example.com:<ip addr of node1> --add-host node2.example.com:<ip addr of node1> hiogawa/mongo-ruby-docker-test:v0
+$ docker run -it --rm=true --name mrdt hiogawa/mongo-ruby-docker-test:v0
 irb(main):001:0> Person.count
 D, [2015-12-07T01:46:17.690268 #9] DEBUG -- : MONGODB | Adding node1.example.com:27017 to the cluster.
 D, [2015-12-07T01:46:17.695390 #9] DEBUG -- : MONGODB | Adding node2.example.com:27017 to the cluster.

@@ -3,7 +3,8 @@ development:
     default:
       database: replica_test_db
       hosts:
-        - node1.example.com:27017
-        - node2.example.com:27017
+        - mongo-primary.test.hiogawa.net:27017
+        - mongo-secondary.test.hiogawa.net:27017
+        - mongo-arbiter.test.hiogawa.net:27017
       options:
         replica_set: rs0
