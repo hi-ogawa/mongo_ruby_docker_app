@@ -35,7 +35,24 @@ D, [2015-12-07T01:51:12.928759 #10] DEBUG -- : MONGODB | node1.example.com:27017
 D, [2015-12-07T01:51:12.929988 #10] DEBUG -- : MONGODB | node1.example.com:27017 | replica_test_db.count | SUCCEEDED | 0.001062199s
 => 2
 
+# set mongo config at runtime
+
+$ docker run -it --rm=true -v /Users/hiogawa/repositories/experiments/mongo_ruby_docker_app/config:/usr/src/app/config --name mrdt hiogawa/mongo-ruby-docker-test:v0.1
+
 # TODO
+- docker run -it --rm=true --name mrdt hiogawa/mongo-ruby-docker-test:v0
+  - doesn't work anymore (from mac os local)
+  - something's wrong here!!
+```
+root@b50635892583:/usr/src/app# wget http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container
+/exposing-a-port-on-a-live-docker-container
+converted 'http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container' (ANSI_X3.4-1968) -> 'http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container' (UTF-8)
+--2015-12-07 12:42:14--  http://stackoverflow.com/questions/19897743/exposing-a-port-on-a-live-docker-container
+Resolving stackoverflow.com (stackoverflow.com)... failed: Name or service not known.
+wget: unable to resolve host address 'stackoverflow.com'
+```
+  - `docker-machine restart default` will solve it.
+
 - check if writing/reading operation to mongodb works when two replica sets are disconnected
 
 =end
