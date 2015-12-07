@@ -8,3 +8,8 @@ development:
         - mongo-arbiter.test.hiogawa.net:27017
       options:
         replica_set: rs0
+
+        user: 'replica_test_db_user'
+        password: 'replica_test_db_user'
+        roles:
+          - 'dbOwner'

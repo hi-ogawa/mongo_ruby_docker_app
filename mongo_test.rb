@@ -4,6 +4,20 @@ Mongoid.load!("./mongoid.yml", :development)
 
 =begin
 
+# add special user
+
+ $ docker exec -it mongo /usr/bin/mongo -u "siteRootAdmin" -p "<password>" --authenticationDatabase "admin"
+ $ use replica_test_db
+ $ db.createUser(
+    {
+      user: "replica_test_db_user",
+      pwd: "replica_test_db_user",
+      roles: [
+         { role: "dbOwner", db: "replica_test_db" }
+      ]
+    }
+  )
+
 $ docker run -it --rm=true --name mrdt hiogawa/mongo-ruby-docker-test:v0
 irb(main):001:0> Person.count
 D, [2015-12-07T01:46:17.690268 #9] DEBUG -- : MONGODB | Adding node1.example.com:27017 to the cluster.
