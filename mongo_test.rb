@@ -4,7 +4,7 @@ Mongoid.load!("./mongoid.yml", :development)
 
 =begin
 
-# add special user
+# add special database user for the application: https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/
 
  $ docker exec -it mongo /usr/bin/mongo -u "siteRootAdmin" -p "<password>" --authenticationDatabase "admin"
  $ use replica_test_db

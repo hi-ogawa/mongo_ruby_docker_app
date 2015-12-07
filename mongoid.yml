@@ -6,6 +6,7 @@ development:
         - mongo-primary.test.hiogawa.net:27017
         - mongo-secondary.test.hiogawa.net:27017
         - mongo-arbiter.test.hiogawa.net:27017
+        - mongo-qingcloud.test.hiogawa.net:27017
       options:
         replica_set: rs0
 
