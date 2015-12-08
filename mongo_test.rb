@@ -1,6 +1,11 @@
+require "rubygems"
+require "bundler/setup"
+
+require "logger"
 require "mongoid"
 
 Mongoid.load!("./config/mongoid.yml", :development)
+Mongo::Logger.logger = Logger.new("./logs/mongoid.log")
 
 =begin
 
@@ -53,7 +58,7 @@ wget: unable to resolve host address 'stackoverflow.com'
 ```
   - `docker-machine restart default` will solve it.
 
-- check if writing/reading operation to mongodb works when two replica sets are disconnected
+- make template directory which could be used easiliy by scp or something
 
 =end
 
